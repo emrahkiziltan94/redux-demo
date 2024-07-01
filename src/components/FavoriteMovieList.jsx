@@ -1,8 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const FavoriteMovieList = (props) => {
+  const dispatch = useDispatch();
   const favorites = useSelector((store) => store.favoritesReducer.favorites);
 
   return (
